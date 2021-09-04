@@ -10,6 +10,7 @@ import {
   MDBNavItem,
 } from 'mdbreact';
 import Image from 'next/image';
+import Link from 'next/link';
 import { FC, useState } from 'react';
 
 export const Header: FC = () => {
@@ -21,19 +22,24 @@ export const Header: FC = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-xl-2 col-lg-3 col-md-12">
-              <a href="#" className="brand-wrap">
-                <Image
-                  className="logo"
-                  layout="fixed"
-                  height={80}
-                  width={80}
-                  src="/images/logo.svg"
-                  alt=".."
-                />
-              </a>
+              <Link href="/">
+                <a className="brand-wrap">
+                  <Image
+                    className="logo"
+                    layout="fixed"
+                    height={80}
+                    width={80}
+                    src="/images/logo.svg"
+                    alt=".."
+                  />
+                </a>
+              </Link>
             </div>
             <div className="col-xl-6 col-lg-5 col-md-6">
-              <form action="#" className="search-header">
+              <form
+                onSubmit={(e) => e.preventDefault()}
+                className="search-header"
+              >
                 <div className="input-group w-100">
                   <select
                     className="custom-select border-right"
@@ -60,36 +66,44 @@ export const Header: FC = () => {
             <div className="col-xl-4 col-lg-4 col-md-6">
               <div className="widgets-wrap float-md-right">
                 <div className="widget-header mr-3">
-                  <a href="#" className="widget-view">
-                    <div className="icon-area">
-                      <i className="fa fa-user" />
-                    </div>
-                    <small className="text"> Sign Up </small>
-                  </a>
+                  <Link href="/">
+                    <a className="widget-view">
+                      <div className="icon-area">
+                        <i className="fa fa-user" />
+                      </div>
+                      <small className="text"> Sign Up </small>
+                    </a>
+                  </Link>
                 </div>
                 <div className="widget-header mr-3">
-                  <a href="#" className="widget-view">
-                    <div className="icon-area">
-                      <i className="fa fa-comment-dots" />
-                    </div>
-                    <small className="text"> Message </small>
-                  </a>
+                  <Link href="/">
+                    <a className="widget-view">
+                      <div className="icon-area">
+                        <i className="fa fa-comment-dots" />
+                      </div>
+                      <small className="text"> Message </small>
+                    </a>
+                  </Link>
                 </div>
                 <div className="widget-header mr-3">
-                  <a href="#" className="widget-view">
-                    <div className="icon-area">
-                      <i className="fa fa-store" />
-                    </div>
-                    <small className="text"> Orders </small>
-                  </a>
+                  <Link href="/">
+                    <a className="widget-view">
+                      <div className="icon-area">
+                        <i className="fa fa-store" />
+                      </div>
+                      <small className="text"> Orders </small>
+                    </a>
+                  </Link>
                 </div>
                 <div className="widget-header">
-                  <a href="#" className="widget-view">
-                    <div className="icon-area">
-                      <i className="fa fa-shopping-cart" />
-                    </div>
-                    <small className="text"> Cart </small>
-                  </a>
+                  <Link href="/">
+                    <a className="widget-view">
+                      <div className="icon-area">
+                        <i className="fa fa-shopping-cart" />
+                      </div>
+                      <small className="text"> Cart </small>
+                    </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -113,50 +127,42 @@ export const Header: FC = () => {
                     <i className="fa fa-bars text-muted mr-2"></i> Categories
                   </MDBDropdownToggle>
                   <MDBDropdownMenu className="dropdown-default">
-                    <MDBDropdownItem href="#!">Machinery</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Electronics</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">Home textile</MDBDropdownItem>
-                    <MDBDropdownItem href="#!">
-                      Home and kitchen
-                    </MDBDropdownItem>
-                    <MDBDropdownItem href="#!">
-                      Service and equipment
-                    </MDBDropdownItem>
-                    <MDBDropdownItem href="#!">
-                      Healthcare items
-                    </MDBDropdownItem>
-                    <MDBDropdownItem href="#!">
-                      Toys and Hobbies
-                    </MDBDropdownItem>
+                    <MDBDropdownItem>Machinery</MDBDropdownItem>
+                    <MDBDropdownItem>Electronics</MDBDropdownItem>
+                    <MDBDropdownItem>Home textile</MDBDropdownItem>
+                    <MDBDropdownItem>Home and kitchen</MDBDropdownItem>
+                    <MDBDropdownItem>Service and equipment</MDBDropdownItem>
+                    <MDBDropdownItem>Healthcare items</MDBDropdownItem>
+                    <MDBDropdownItem>Toys and Hobbies</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
               <MDBNavItem>
-                <a className="nav-link" href="#">
-                  Ready to ship
-                </a>
+                <Link href="/">
+                  <a className="nav-link">Ready to ship</a>
+                </Link>
               </MDBNavItem>
               <MDBNavItem>
-                <a className="nav-link" href="#">
-                  Trade shows
-                </a>
+                <Link href="/">
+                  <a className="nav-link">Trade shows</a>
+                </Link>
               </MDBNavItem>
               <MDBNavItem>
-                <a className="nav-link" href="#">
-                  Services
-                </a>
+                <Link href="/">
+                  <a className="nav-link">Services</a>
+                </Link>
               </MDBNavItem>
               <MDBNavItem>
-                <a className="nav-link" href="#">
-                  Sell with us
-                </a>
+                <Link href="/">
+                  <a className="nav-link">Sell with us</a>
+                </Link>
               </MDBNavItem>
             </MDBNavbarNav>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <a className="nav-link" href="./register.html">
-                  Register With Us
-                </a>
+                <Link href="/register" passHref>
+                  <a className="nav-link">Register With Us</a>
+                </Link>
               </MDBNavItem>
 
               <MDBNavItem>
@@ -165,7 +171,7 @@ export const Header: FC = () => {
                     <i className="fas fa-language mr-1"></i>English
                   </MDBDropdownToggle>
                   <MDBDropdownMenu className="dropdown-default">
-                    <MDBDropdownItem href="#!">Arabic</MDBDropdownItem>
+                    <MDBDropdownItem>Arabic</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
