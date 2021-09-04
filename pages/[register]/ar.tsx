@@ -99,7 +99,7 @@ const Register: NextPage = () => {
     }
   }
 
-  if (!showSucess) {
+  if (showSucess) {
     return <RegisterSuccess isArabic={true} />;
   }
 
