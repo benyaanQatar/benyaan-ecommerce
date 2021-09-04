@@ -6,6 +6,7 @@ import { ErrorComponent, InputFieldProps } from './input-field';
 interface DateFieldInputProps extends Omit<InputFieldProps, 'type'> {
   setValues: any;
   values: any;
+  showArabic?: boolean;
 }
 
 export const DateFieldInput: FC<DateFieldInputProps> = ({
@@ -14,11 +15,14 @@ export const DateFieldInput: FC<DateFieldInputProps> = ({
   title,
   setValues,
   values,
+  showArabic = false,
 }) => {
-  const ref = useRef<HTMLElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
 
   function handleFocus() {
-    let input = ref?.current;
+    let input = ref?.current?.querySelector(
+      `input.${name}`
+    ) as HTMLInputElement;
 
     if (input) {
       input.focus();
@@ -26,25 +30,22 @@ export const DateFieldInput: FC<DateFieldInputProps> = ({
   }
 
   return (
-    <div className="col form-group">
+    <div ref={ref} className="col form-group">
       <em style={{ fontSize: '12px' }}>
         <span> {title} </span>
       </em>
       <div>
         <DatePicker
-          ref={ref}
           containerClassName="w-100"
-          inputClass={inputClassName}
+          inputClass={inputClassName + ' ' + name}
           value={values[name]}
           multiple={false}
           onFocusedDateChange={(e) => {
             if (e instanceof DateObject) {
-              console.log(values);
-              console.log(e.format('MM/DD/YYYY'));
-
               setValues({ ...values, [name]: e?.format('YYYY-MM-DD') });
             }
           }}
+          // locale={showArabic ? ar : en}
           placeholder="MM/DD/YYYY"
         />
       </div>

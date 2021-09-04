@@ -1,8 +1,30 @@
 import { Form, Formik } from 'formik';
 import type { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import { useState } from 'react';
-import { DateFieldInput } from '../shared/container/date-field';
-import { InputField } from '../shared/container/input-field';
+import { RegisterSuccess } from '../../components/messages/register-success';
+import { DateFieldInput } from '../../shared/container/date-field';
+import { InputField } from '../../shared/container/input-field';
+
+const BuisnessTypePicker = dynamic(
+  () => import('../../components/helpers/buisness-type-picker'),
+  {
+    ssr: false,
+  }
+);
+
+interface FormDataType {
+  ProviderName: string;
+  Email: string;
+  CommercialRegistrationNumberIssueDate: string;
+  CommercialRegistrationNumberExpiryDate: string;
+  TradingLicenseNumberIssueDate: string;
+  TradingLicenseNumberExpiryDate: string;
+  ClientManagerAuthorizedSignatureName: string;
+  PhoneNumber: string;
+  CompanyAddress: string;
+  BusinessType: string[];
+}
 
 const Register: NextPage = () => {
   const [commercialRegistrationFile, setCommercialRegistrationFile] =
@@ -11,6 +33,75 @@ const Register: NextPage = () => {
     useState<File>();
   const [UploadyourCompanyProfilePDFFile, setUploadyourCompanyProfilePDFFile] =
     useState<File>();
+
+  const [response, setReponse] = useState<string | null>(null);
+  const [showSucess, setShowSuccess] = useState<boolean>(false);
+
+  function handleSubmit(
+    values: FormDataType,
+    setSubmitting: (isSubmitting: boolean) => void
+  ) {
+    try {
+      let data = {};
+
+      const inputs: any = values;
+
+      for (let each in inputs) {
+        data = { ...data, [each]: inputs[each] };
+      }
+
+      const formData = new FormData();
+      formData.append('data', JSON.stringify(data));
+
+      if (commercialRegistrationFile) {
+        formData.append(
+          'files.CommercialRegistration',
+          commercialRegistrationFile
+        );
+      }
+
+      if (tradingLicenseNumberFile) {
+        formData.append('files.TradingLicense', tradingLicenseNumberFile);
+      }
+
+      if (UploadyourCompanyProfilePDFFile) {
+        formData.append(
+          'files.UploadyourCompanyProfilePDF',
+          UploadyourCompanyProfilePDFFile
+        );
+      }
+
+      fetch('https://benyaan.herokuapp.com/suppliers', {
+        method: 'POST',
+        body: formData,
+      })
+        .then((res) => {
+          setSubmitting(false);
+          if (res.status === 200) {
+            setShowSuccess(true);
+          } else {
+            throw new Error('Failed');
+          }
+        })
+        .catch((e) => {
+          setReponse('Something went wrong');
+          setTimeout(() => {
+            setReponse(null);
+          }, 2000);
+          setSubmitting(false);
+        });
+    } catch (error) {
+      setSubmitting(false);
+      setReponse('Something went wrong');
+      setTimeout(() => {
+        setReponse(null);
+      }, 2000);
+    }
+  }
+
+  if (showSucess) {
+    return <RegisterSuccess />;
+  }
 
   return (
     <div
@@ -32,6 +123,10 @@ const Register: NextPage = () => {
             ClientManagerAuthorizedSignatureName: '',
             PhoneNumber: '',
             CompanyAddress: '',
+            BusinessType: [],
+            SocialMediaInstagram: '',
+            SocialMediaSnapchat: '',
+            SocialMediaTwitter: '',
           }}
           validate={(values) => {
             let errors: any = {};
@@ -72,7 +167,10 @@ const Register: NextPage = () => {
               return errors;
             }
 
-            // Buisness type error
+            if (!values.BusinessType.length) {
+              errors.BusinessType = defaultError;
+              return errors;
+            }
 
             if (!values.ClientManagerAuthorizedSignatureName) {
               errors.ClientManagerAuthorizedSignatureName = defaultError;
@@ -87,8 +185,8 @@ const Register: NextPage = () => {
             return errors;
           }}
           onSubmit={(values, { setSubmitting, resetForm }) => {
-            console.log(values);
-            // setSubmitting(true);
+            setSubmitting(true);
+            handleSubmit(values, setSubmitting);
           }}
         >
           {({ isSubmitting, values, setValues }) => {
@@ -200,17 +298,11 @@ const Register: NextPage = () => {
                   </div>
                 </div>
                 <div className="form-row mb-4">
-                  <div className="col form-group">
-                    <label>
-                      <span>Business type</span>
-                    </label>
-                    <input
-                      name="BusinessType"
-                      type="text"
-                      className="form-control"
-                      required
-                    />
-                  </div>
+                  <BuisnessTypePicker
+                    setValues={setValues}
+                    values={values}
+                    name="BusinessType"
+                  />
                 </div>
                 <header className="section-heading heading-line">
                   <h5 className="title-section text-uppercase" />
@@ -226,14 +318,14 @@ const Register: NextPage = () => {
                     name="ClientManagerAuthorizedSignatureName"
                     title="Client/ Manager/ Authorized Signature Name"
                     type="text"
-                    containerClass="col"
+                    containerClass="col-lg-6 col-12"
                   />
                   <InputField
                     inputClassName="form-control"
                     name="PhoneNumber"
                     title="Phone Number"
                     type="tel"
-                    containerClass="col"
+                    containerClass="col-lg-6 col-12"
                   />
                 </div>
 
@@ -259,8 +351,8 @@ const Register: NextPage = () => {
 
                     <InputField
                       inputClassName="form-control"
-                      name="Snapchat"
-                      title="SocialMediaSnapchat"
+                      name="SocialMediaSnapchat"
+                      title="Snapchat"
                       type="text"
                       containerClass="social-inputs  col-sm-4 col-12"
                     />
@@ -310,13 +402,23 @@ const Register: NextPage = () => {
                   </div>
                 </div>
 
+                <p className="text-danger text-center">{response}</p>
+
                 <button
                   type="submit"
                   style={{ maxWidth: '350px' }}
                   className="btn btn-primary btn-block m-auto mt-5"
                   id="continue-btn-ref"
+                  disabled={isSubmitting}
                 >
-                  Submit
+                  {isSubmitting ? (
+                    <span>
+                      <i className="fas fa-spinner fa-spin mr-3"></i>
+                      Please wait
+                    </span>
+                  ) : (
+                    <span>Submit</span>
+                  )}
                 </button>
               </Form>
             );

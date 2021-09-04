@@ -160,7 +160,7 @@ export const Header: FC = () => {
             </MDBNavbarNav>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <Link href="/register" passHref>
+                <Link href="/register/en" passHref>
                   <a className="nav-link">Register With Us</a>
                 </Link>
               </MDBNavItem>
@@ -168,10 +168,15 @@ export const Header: FC = () => {
               <MDBNavItem>
                 <MDBDropdown>
                   <MDBDropdownToggle nav caret>
-                    <i className="fas fa-language mr-1"></i>English
+                    <i className="fas fa-language mr-1"></i> Language
                   </MDBDropdownToggle>
-                  <MDBDropdownMenu className="dropdown-default">
-                    <MDBDropdownItem>Arabic</MDBDropdownItem>
+                  <MDBDropdownMenu>
+                    <Link href="/register/en" passHref>
+                      <MDBDropdownItem>English</MDBDropdownItem>
+                    </Link>
+                    <Link href="/register/ar" passHref>
+                      <MDBDropdownItem>Arabic</MDBDropdownItem>
+                    </Link>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>
