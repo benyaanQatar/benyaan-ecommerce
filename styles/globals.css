@@ -14,3 +14,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.input-cut-text {
+  text-overflow: clip;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+}
+
+.social-inputs label {
+  font-style: italic;
+  font-size: 11px;
+  margin-bottom: 3px;
+}

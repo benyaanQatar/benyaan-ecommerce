@@ -1,349 +1,327 @@
+import { Form, Formik } from 'formik';
 import type { NextPage } from 'next';
+import { useState } from 'react';
+import { DateFieldInput } from '../shared/container/date-field';
+import { InputField } from '../shared/container/input-field';
 
 const Register: NextPage = () => {
+  const [commercialRegistrationFile, setCommercialRegistrationFile] =
+    useState<File>();
+  const [tradingLicenseNumberFile, setTradingLicenseNumberFile] =
+    useState<File>();
+  const [UploadyourCompanyProfilePDFFile, setUploadyourCompanyProfilePDFFile] =
+    useState<File>();
+
   return (
     <div
       className="card mx-auto register-form"
       style={{ marginTop: '40px', marginBottom: '40px' }}
     >
       <article className="card-body" id="register-view">
-        <header className="mb-4 d-flex justify-content-between">
+        <header className="mb-4 ">
           <h3 className="card-title highlight-color">Supplier Registration</h3>
-          <h5 className="card-title highlight-color">
-            المعلومات المطلوبة للتسجيل في التطبيق
-          </h5>
         </header>
-        <form id="supplier-form">
-          <div className="form-group mb-4">
-            <label className="d-flex justify-content-between">
-              <span> Service Provider Name </span>
-              <span>اسم مزود الخدمة</span>
-            </label>
-            <input
-              name="ProviderName"
-              type="text"
-              className="form-control"
-              required
-            />
-          </div>
-          <div className="form-group mb-4">
-            <label className="d-flex justify-content-between">
-              <span> Email </span>
-              <span className="d-block">البريد الالكتروني</span>
-            </label>
-            <input
-              name="Email"
-              type="email"
-              className="form-control"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label className="d-flex justify-content-between">
-              <span> Commercial Registration Number </span>
-              <span>رقم السجل التجاري</span>
-            </label>
-            <div className="form-row">
-              <div className="col form-group">
-                <em
-                  style={{ fontSize: '12px' }}
-                  className="d-flex justify-content-between"
-                >
-                  <span> Issue Date </span>
-                  <span> تاريخ بدء الترخيص </span>
-                </em>
-                <input
-                  name="CommercialRegistrationNumberIssueDate"
-                  type="date"
-                  className="form-control"
-                  required
-                />
-              </div>
-              <div className="col form-group">
-                <em
-                  style={{ fontSize: '12px' }}
-                  className="d-flex justify-content-between"
-                >
-                  <span> Expiry Date </span>
-                  <span>تاريخ انتهاء الترخيص</span>
-                </em>
-                <input
-                  name="CommercialRegistrationNumberExpiryDate"
-                  type="date"
-                  className="form-control"
-                  required
-                />
-              </div>
-            </div>
-            <div className="input-group mb-3">
-              <div className="custom-file">
-                <input
-                  name="CommercialRegistration"
-                  type="file"
-                  className="custom-file-input"
-                  id="commercialRegistrationFile"
-                />
-                <label
-                  className="custom-file-label"
-                  htmlFor="inputGroupFile01"
-                  id="commercialRegistrationFilelabel"
-                  style={{ fontSize: '13px' }}
-                >
-                  Upload file
-                </label>
-              </div>
-            </div>
-          </div>
-          <div className="mb-4">
-            <label className="d-flex justify-content-between">
-              <span> Trading License Number </span>
-              <span> رقم الرخصة التجارية </span>
-            </label>
-            <div className="form-row">
-              <div className="col form-group">
-                <em
-                  style={{ fontSize: '12px' }}
-                  className="d-flex justify-content-between"
-                >
-                  <span> Issue Date </span>
-                  <span> تاريخ بدء الترخيص </span>
-                </em>
-                <input
-                  name="TradingLicenseNumberIssueDate"
-                  type="date"
-                  className="form-control"
-                  required
-                />
-              </div>
-              <div className="col form-group">
-                <em
-                  style={{ fontSize: '12px' }}
-                  className="d-flex justify-content-between"
-                >
-                  <span> Expiry Date </span>
-                  <span>تاريخ انتهاء الترخيص</span>
-                </em>
-                <input
-                  name="TradingLicenseNumberExpiryDate"
-                  type="date"
-                  className="form-control"
-                  required
-                />
-              </div>
-            </div>
-            <div className="input-group mb-3">
-              <div className="custom-file">
-                <input
-                  type="file"
-                  id="tradingLicenseFile"
-                  className="custom-file-input"
-                  name="TradingLicense"
-                />
-                <label
-                  className="custom-file-label"
-                  htmlFor="inputGroupFile01"
-                  id="tradingLicenseFilelabel"
-                  style={{ fontSize: '13px' }}
-                >
-                  Upload file
-                </label>
-              </div>
-            </div>
-          </div>
-          <div className="form-row mb-4">
-            <div className="col form-group">
-              <label className="d-flex justify-content-between">
-                <span>Business type</span>
-                <span>مجال الشركة</span>
-              </label>
-              <input
-                name="BusinessType"
-                type="text"
-                className="form-control"
-                required
-              />
-            </div>
-          </div>
-          <header className="section-heading heading-line">
-            <h5 className="title-section text-uppercase" />
-          </header>
-          <header className="mb-4 d-flex justify-content-between">
-            <h3 className="card-title highlight-color">Company Information</h3>
-            <h5 className="card-title highlight-color">معلومات الشركة</h5>
-          </header>
-          <div className="form-group mb-4">
-            <label className="d-flex justify-content-between">
-              <span> Client/Manager/Authorized Signature Name </span>
-              <span> اسم العميل /المدير/المخول بالتوقيع </span>
-            </label>
-            <input
-              name="ClientManagerAuthorizedSignatureName"
-              type="text"
-              className="form-control"
-              required
-            />
-          </div>
-          <div className="form-row mb-4">
-            <div className="col form-group">
-              <label className="d-flex justify-content-between">
-                <span> Phone Number </span>
-                <span> رقم الهاتف </span>
-              </label>
-              <input
-                name="PhoneNumber"
-                type="tel"
-                className="form-control"
-                required
-              />
-            </div>
-          </div>
-          <div className="form-group mb-4">
-            <label className="d-flex justify-content-between">
-              <span> Company Address </span>
-              <span> عنوان الشركة </span>
-            </label>
-            <input
-              name="CompanyAddress"
-              type="text"
-              className="form-control"
-              required
-            />
-          </div>
-          <div className="mb-4">
-            <label htmlFor="" className="d-flex justify-content-between">
-              <span> Social Media </span>
-              <span> لينك مواقع التواصل الاجتماعي </span>
-            </label>
-            <div className="form-row">
-              <div className="form-group col-sm-4 col-12">
-                <em
-                  style={{ fontSize: '14px' }}
-                  className="d-flex justify-content-between"
-                >
-                  <span> Instagram </span>
-                  <span> انستغرام </span>
-                </em>
-                <input
-                  name="SocialMediaInstagram"
+        <Formik
+          initialValues={{
+            ProviderName: '',
+            Email: '',
+            CommercialRegistrationNumberIssueDate: '',
+            CommercialRegistrationNumberExpiryDate: '',
+            TradingLicenseNumberIssueDate: '',
+            TradingLicenseNumberExpiryDate: '',
+            ClientManagerAuthorizedSignatureName: '',
+            PhoneNumber: '',
+            CompanyAddress: '',
+          }}
+          validate={(values) => {
+            let errors: any = {};
+            const defaultError = 'Please fill this field';
+
+            if (!values.ProviderName) {
+              errors.ProviderName = defaultError;
+              return errors;
+            }
+
+            if (!values.Email) {
+              errors.Email = defaultError;
+              return errors;
+            } else if (
+              !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.Email)
+            ) {
+              errors.Email = 'Invalid email address';
+              return errors;
+            }
+
+            if (!values.CommercialRegistrationNumberIssueDate) {
+              errors.CommercialRegistrationNumberIssueDate = defaultError;
+              return errors;
+            }
+
+            if (!values.CommercialRegistrationNumberExpiryDate) {
+              errors.CommercialRegistrationNumberExpiryDate = defaultError;
+              return errors;
+            }
+
+            if (!values.TradingLicenseNumberIssueDate) {
+              errors.TradingLicenseNumberIssueDate = defaultError;
+              return errors;
+            }
+
+            if (!values.TradingLicenseNumberExpiryDate) {
+              errors.TradingLicenseNumberExpiryDate = defaultError;
+              return errors;
+            }
+
+            // Buisness type error
+
+            if (!values.ClientManagerAuthorizedSignatureName) {
+              errors.ClientManagerAuthorizedSignatureName = defaultError;
+              return errors;
+            }
+
+            if (!values.CompanyAddress) {
+              errors.CompanyAddress = defaultError;
+              return errors;
+            }
+
+            return errors;
+          }}
+          onSubmit={(values, { setSubmitting, resetForm }) => {
+            console.log(values);
+            // setSubmitting(true);
+          }}
+        >
+          {({ isSubmitting, values, setValues }) => {
+            return (
+              <Form id="supplier-form" noValidate>
+                <InputField
                   type="text"
-                  className="form-control"
+                  name="ProviderName"
+                  inputClassName="form-control"
+                  title="Service Provider Name"
                 />
-              </div>
-              <div className="form-group col-sm-4 col-12">
-                <em
-                  style={{ fontSize: '14px' }}
-                  className="d-flex justify-content-between"
-                >
-                  <span> Snapchat </span>
-                  <span> سناب شات </span>
-                </em>
-                <input
-                  name="SocialMediaSnapchat"
+                <InputField
+                  type="email"
+                  name="Email"
+                  inputClassName="form-control"
+                  title="Email"
+                />
+
+                <div className="mb-4">
+                  <label>
+                    <span> Commercial Registration Number </span>
+                  </label>
+                  <div className="form-row">
+                    <DateFieldInput
+                      inputClassName="form-control"
+                      name="CommercialRegistrationNumberIssueDate"
+                      title="Issue Date"
+                      setValues={setValues}
+                      values={values}
+                    />
+                    <DateFieldInput
+                      inputClassName="form-control"
+                      name="CommercialRegistrationNumberExpiryDate"
+                      title="Expiry Date"
+                      setValues={setValues}
+                      values={values}
+                    />
+                  </div>
+                  <div className="input-group mb-3">
+                    <div className="custom-file">
+                      <input
+                        name="CommercialRegistration"
+                        type="file"
+                        className="custom-file-input"
+                        id="commercialRegistrationFile"
+                        onChange={(e) => {
+                          if (e.target.files?.length) {
+                            setCommercialRegistrationFile(e.target.files[0]);
+                          } else {
+                            setCommercialRegistrationFile(undefined);
+                          }
+                        }}
+                      />
+                      <label
+                        className="custom-file-label input-cut-text"
+                        htmlFor="commercialRegistrationFile"
+                        id="commercialRegistrationFilelabel"
+                        style={{ fontSize: '13px' }}
+                      >
+                        {commercialRegistrationFile?.name || 'Upload file'}
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <label>
+                    <span> Trading License Number </span>
+                  </label>
+                  <div className="form-row">
+                    <DateFieldInput
+                      inputClassName="form-control"
+                      name="TradingLicenseNumberIssueDate"
+                      setValues={setValues}
+                      values={values}
+                      title="Issue Date"
+                    />
+                    <DateFieldInput
+                      inputClassName="form-control"
+                      name="TradingLicenseNumberExpiryDate"
+                      setValues={setValues}
+                      values={values}
+                      title="Expiry Date"
+                    />
+                  </div>
+                  <div className="input-group mb-3">
+                    <div className="custom-file">
+                      <input
+                        name="TradingLicense"
+                        type="file"
+                        className="custom-file-input"
+                        id="commercialRegistrationFile"
+                        onChange={(e) => {
+                          if (e.target.files?.length) {
+                            setTradingLicenseNumberFile(e.target.files[0]);
+                          } else {
+                            setTradingLicenseNumberFile(undefined);
+                          }
+                        }}
+                      />
+                      <label
+                        className="custom-file-label input-cut-text"
+                        htmlFor="tradingLicenseFilelabel"
+                        id="tradingLicenseFilelabel"
+                        style={{ fontSize: '13px' }}
+                      >
+                        {tradingLicenseNumberFile?.name || 'Upload file'}
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div className="form-row mb-4">
+                  <div className="col form-group">
+                    <label>
+                      <span>Business type</span>
+                    </label>
+                    <input
+                      name="BusinessType"
+                      type="text"
+                      className="form-control"
+                      required
+                    />
+                  </div>
+                </div>
+                <header className="section-heading heading-line">
+                  <h5 className="title-section text-uppercase" />
+                </header>
+                <header className="mb-4 ">
+                  <h3 className="card-title highlight-color">
+                    Company Information
+                  </h3>
+                </header>
+                <div className="form-row">
+                  <InputField
+                    inputClassName="form-control"
+                    name="ClientManagerAuthorizedSignatureName"
+                    title="Client/ Manager/ Authorized Signature Name"
+                    type="text"
+                    containerClass="col"
+                  />
+                  <InputField
+                    inputClassName="form-control"
+                    name="PhoneNumber"
+                    title="Phone Number"
+                    type="tel"
+                    containerClass="col"
+                  />
+                </div>
+
+                <InputField
+                  inputClassName="form-control"
+                  name="CompanyAddress"
+                  title="Company Address"
                   type="text"
-                  className="form-control"
                 />
-              </div>
-              <div className="form-group col-sm-4 col-12">
-                <em
-                  style={{ fontSize: '14px' }}
-                  className="d-flex justify-content-between"
+
+                <div className="">
+                  <label htmlFor="">
+                    <span> Social Media </span>
+                  </label>
+                  <div className="form-row">
+                    <InputField
+                      inputClassName="form-control"
+                      name="SocialMediaInstagram"
+                      title="Instagram"
+                      type="text"
+                      containerClass="social-inputs  col-sm-4 col-12"
+                    />
+
+                    <InputField
+                      inputClassName="form-control"
+                      name="Snapchat"
+                      title="SocialMediaSnapchat"
+                      type="text"
+                      containerClass="social-inputs  col-sm-4 col-12"
+                    />
+
+                    <InputField
+                      inputClassName="form-control"
+                      name="SocialMediaTwitter"
+                      title="Twitter"
+                      type="text"
+                      containerClass="social-inputs  col-sm-4 col-12"
+                    />
+                  </div>
+                </div>
+                <div className="mb-4">
+                  <label htmlFor="UploadyourCompanyProfilePDF">
+                    <span>
+                      Upload your Company Profile <small>(PDF only)</small>
+                    </span>
+                  </label>
+                  <div className="input-group mb-3">
+                    <div className="custom-file">
+                      <input
+                        type="file"
+                        id="companyProfile"
+                        className="custom-file-input"
+                        name="UploadyourCompanyProfilePDF"
+                        accept=".pdf"
+                        onChange={(e) => {
+                          if (e.target.files?.length) {
+                            setUploadyourCompanyProfilePDFFile(
+                              e.target.files[0]
+                            );
+                          } else {
+                            setUploadyourCompanyProfilePDFFile(undefined);
+                          }
+                        }}
+                      />
+                      <label
+                        className="custom-file-label"
+                        htmlFor="UploadyourCompanyProfilePDF"
+                        id="companyProfilelabel"
+                        style={{ fontSize: '13px' }}
+                      >
+                        {UploadyourCompanyProfilePDFFile?.name || 'Upload file'}
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <button
+                  type="submit"
+                  style={{ maxWidth: '350px' }}
+                  className="btn btn-primary btn-block m-auto mt-5"
+                  id="continue-btn-ref"
                 >
-                  <span> Twitter </span>
-                  <span> تويتر </span>
-                </em>
-                <input
-                  name="SocialMediaTwitter"
-                  type="text"
-                  className="form-control"
-                />
-              </div>
-            </div>
-          </div>
-          <div className="mb-4">
-            <label className="d-flex justify-content-between">
-              <span>
-                Upload your Company Profile <small>(PDF only)</small>
-              </span>
-              <span> تحميل الملف التعريفي بالشركة </span>
-            </label>
-            <div className="input-group mb-3">
-              <div className="custom-file">
-                <input
-                  type="file"
-                  id="companyProfile"
-                  className="custom-file-input"
-                  name="UploadyourCompanyProfilePDF"
-                  accept=".pdf"
-                />
-                <label
-                  className="custom-file-label"
-                  htmlFor="inputGroupFile01"
-                  id="companyProfilelabel"
-                  style={{ fontSize: '13px' }}
-                >
-                  Upload file
-                </label>
-              </div>
-            </div>
-          </div>
-          <div className="form mb-4">
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                name="ContactUsByEmailForSupportAndEnquiry"
-                id="emailsupport"
-                defaultChecked
-                style={{ width: '20px', height: '20px' }}
-              />
-              <label
-                style={{ fontSize: '13px', marginLeft: '20px' }}
-                className="d-flex justify-content-between"
-              >
-                <span style={{ marginTop: '8px' }}>
-                  Contact us by email for support and enquiry
-                </span>
-                <span style={{ marginTop: '8px' }}>
-                  مراسلتنا عبر البريد الالكتروني (للمساعدة)
-                </span>
-              </label>
-            </div>
-          </div>
-          <div className="form mb-4">
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                name="ShareOurPlatformWithOthers"
-                id="platformshare"
-                defaultChecked
-                style={{ width: '20px', height: '20px' }}
-              />
-              <label
-                style={{ fontSize: '13px', marginLeft: '20px' }}
-                className="d-flex justify-content-between"
-              >
-                <span style={{ marginTop: '8px' }}>
-                  Share our Platform with others
-                </span>
-                <span style={{ marginTop: '8px' }}>
-                  مشاركة التطبيق (رابط بنيان)
-                </span>
-              </label>
-            </div>
-          </div>
-          <p className="text-danger text-center mb-4" id="text-error" />
-          <div className="form-group mt-4">
-            <button
-              type="submit"
-              style={{ maxWidth: '350px' }}
-              className="btn btn-primary btn-block m-auto mt-5"
-              id="continue-btn-ref"
-            >
-              Submit
-            </button>
-          </div>
-        </form>
+                  Submit
+                </button>
+              </Form>
+            );
+          }}
+        </Formik>
       </article>
     </div>
   );
