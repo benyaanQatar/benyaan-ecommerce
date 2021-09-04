@@ -26,3 +26,15 @@ a {
   font-size: 11px;
   margin-bottom: 3px;
 }
+
+.arabic-reg input {
+  text-align: right;
+}
+
+.arabic-reg input[type='email'] {
+  text-align: left;
+}
+
+.arabic-reg input[type='phone'] {
+  text-align: left;
+}

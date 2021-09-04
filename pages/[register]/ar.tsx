@@ -7,7 +7,7 @@ import { DateFieldInput } from '../../shared/container/date-field';
 import { InputField } from '../../shared/container/input-field';
 
 const BuisnessTypePicker = dynamic(
-  () => import('../../components/helpers/buisness-type-picker'),
+  () => import('../../components/helpers/buisness-types-picker-ar'),
   {
     ssr: false,
   }
@@ -105,10 +105,10 @@ const Register: NextPage = () => {
 
   return (
     <div
-      className="card mx-auto register-form"
+      className="card mx-auto register-form arabic-reg"
       style={{ marginTop: '40px', marginBottom: '40px' }}
     >
-      <article className="card-body" id="register-view">
+      <article className="card-body text-right" id="register-view">
         <header className="mb-4 ">
           <h3 className="card-title highlight-color">
             المعلومات المطلوبة للتسجيل في التطبيق
