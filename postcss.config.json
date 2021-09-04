@@ -1,0 +1,17 @@
+{
+  "plugins": [
+    [
+      "postcss-preset-env",
+      {
+        "autoprefixer": {
+          "flexbox": "no-2009",
+          "transition-property": "no"
+        },
+        "stage": 3,
+        "features": {
+          "custom-properties": false
+        }
+      }
+    ]
+  ]
+}
