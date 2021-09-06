@@ -18,6 +18,7 @@ export const DateFieldInput: FC<DateFieldInputProps> = ({
   showArabic = false,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
+  const dateRef = useRef<HTMLDivElement>(null);
 
   function handleFocus() {
     let input = ref?.current?.querySelector(
@@ -36,17 +37,20 @@ export const DateFieldInput: FC<DateFieldInputProps> = ({
       </em>
       <div>
         <DatePicker
+          ref={dateRef}
           containerClassName="w-100"
           inputClass={inputClassName + ' ' + name}
-          value={values[name]}
+          value={values[name] || undefined}
           multiple={false}
-          onFocusedDateChange={(e) => {
+          format="YYYY-MM-DD"
+          onChange={(e: any) => {
             if (e instanceof DateObject) {
               setValues({ ...values, [name]: e?.format('YYYY-MM-DD') });
+            } else {
+              setValues({ ...values, [name]: undefined });
             }
           }}
-          // locale={showArabic ? ar : en}
-          placeholder="MM/DD/YYYY"
+          placeholder={showArabic ? 'حدد تاريخ' : 'Select date'}
         />
       </div>
       <ErrorMessage

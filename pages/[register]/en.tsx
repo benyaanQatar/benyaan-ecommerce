@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { RegisterSuccess } from '../../components/messages/register-success';
 import { DateFieldInput } from '../../shared/container/date-field';
 import { InputField } from '../../shared/container/input-field';
+export const api = 'https://benyaan.herokuapp.com/suppliers';
 
 const BuisnessTypePicker = dynamic(
   () => import('../../components/helpers/buisness-type-picker'),
@@ -71,7 +72,7 @@ const Register: NextPage = () => {
         );
       }
 
-      fetch('https://benyaan.herokuapp.com/suppliers', {
+      fetch(api, {
         method: 'POST',
         body: formData,
       })
@@ -174,6 +175,11 @@ const Register: NextPage = () => {
 
             if (!values.ClientManagerAuthorizedSignatureName) {
               errors.ClientManagerAuthorizedSignatureName = defaultError;
+              return errors;
+            }
+
+            if (!values.PhoneNumber) {
+              errors.PhoneNumber = defaultError;
               return errors;
             }
 

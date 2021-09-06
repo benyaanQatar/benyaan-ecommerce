@@ -3560,7 +3560,7 @@ react-clipboard.js@^2.0.16:
     clipboard "^2.0.0"
     prop-types "^15.5.0"
 
-react-date-object@^2.1.4:
+react-date-object@^2.1.2:
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/react-date-object/-/react-date-object-2.1.4.tgz#f9e7f3f2e3f605f79067495f171b261d5e0f4a33"
   integrity sha512-5V1EaklRXbjKMb44MxPS7jyo//QUrBUecbrNvV7lgWdlHnTW13jmcYfK9YXyAIuwVfXjopgk/8kDSPoAptRwnw==
@@ -3642,12 +3642,12 @@ react-modal@^3.8.1:
     react-lifecycles-compat "^3.0.0"
     warning "^4.0.3"
 
-react-multi-date-picker@^3.1.3:
-  version "3.1.3"
-  resolved "https://registry.yarnpkg.com/react-multi-date-picker/-/react-multi-date-picker-3.1.3.tgz#c152b06c1d06751f85d0e8eacd63b52425b8bfba"
-  integrity sha512-5RchwSAp1lRDe04LiyZM40z65RkJ/Lw0Ov3/hJ/4mJiFhaFjH/CRxSDl49vH3j0BO/CWyzzo9TrrUfWJYmMG2A==
+react-multi-date-picker@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/react-multi-date-picker/-/react-multi-date-picker-3.0.0.tgz#2df642e75f8243c9fd9ce38909bcb6b9ebcf8b0e"
+  integrity sha512-vpQeUf6PO+s4LziWN3zI4y5AEm17JlTU3QZNpHtDxCiukEknIsqz3wexgwoqNqvphh8jXqnS1XnxSw987IBozw==
   dependencies:
-    react-date-object "^2.1.4"
+    react-date-object "^2.1.2"
     react-element-popper "^2.0.0"
 
 react-numeric-input@2.2.3:

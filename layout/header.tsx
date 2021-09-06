@@ -175,7 +175,7 @@ export const Header: FC = () => {
                       <MDBDropdownItem>English</MDBDropdownItem>
                     </Link>
                     <Link href="/register/ar" passHref>
-                      <MDBDropdownItem>Arabic</MDBDropdownItem>
+                      <MDBDropdownItem>عربي</MDBDropdownItem>
                     </Link>
                   </MDBDropdownMenu>
                 </MDBDropdown>
