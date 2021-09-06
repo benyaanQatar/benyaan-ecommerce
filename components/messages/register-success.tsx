@@ -14,11 +14,11 @@ export const RegisterSuccess: FC<{ isArabic?: boolean }> = ({
       >
         <div className="container">
           <header className="section-heading">
-            <h2 className="section-title">
+            <p className="section-title" style={{ fontSize: '30px' }}>
               {isArabic
                 ? 'شكرًا لك على اهتمامك بأن تكون جزءًا منا. سيتصل بك فريقنا قريبًا!'
                 : 'Thank you for your interest in being a part of Benyaan. Our team will soon contact you!'}
-            </h2>
+            </p>
           </header>
           <div className="row">
             <ClipBoard
@@ -43,7 +43,7 @@ export const RegisterSuccess: FC<{ isArabic?: boolean }> = ({
 
             <a href="mail:example.com" className="btn btn-primary m-3">
               <i className="fas fa-envelope-open-text mr-2"></i>
-              {isArabic ? 'اتصل بنا' : 'Contact us'}
+              <span>{isArabic ? 'اتصل بنا' : 'Contact us'}</span>
             </a>
           </div>
         </div>
