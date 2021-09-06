@@ -152,15 +152,10 @@ export const Header: FC = () => {
                   <a className="nav-link">Services</a>
                 </Link>
               </MDBNavItem>
-              <MDBNavItem>
-                <Link href="/">
-                  <a className="nav-link">Sell with us</a>
-                </Link>
-              </MDBNavItem>
             </MDBNavbarNav>
             <MDBNavbarNav right>
               <MDBNavItem>
-                <Link href="/register/en" passHref>
+                <Link href="/register/en">
                   <a className="nav-link">Register With Us</a>
                 </Link>
               </MDBNavItem>
