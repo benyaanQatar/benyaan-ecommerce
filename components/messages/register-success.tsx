@@ -7,14 +7,18 @@ export const RegisterSuccess: FC<{ isArabic?: boolean }> = ({
   const [linkCopied, setLinkCopied] = useState<boolean>(false);
 
   return (
-    <section className="section-content padding-y pb-5" id="success-view">
+    <section
+      className="section-content padding-y pb-5"
+      id="success-view"
+      style={isArabic ? { direction: 'rtl' } : {}}
+    >
       <div
         className="card mx-auto register-form pt-5 pb-5"
         style={{ marginTop: '40px', marginBottom: '40px' }}
       >
         <div className="container">
           <header className="section-heading">
-            <p className="section-title" style={{ fontSize: '30px' }}>
+            <p className={'section-title '} style={{ fontSize: '30px' }}>
               {isArabic
                 ? 'شكرًا لك على اهتمامك بأن تكون جزءًا منا. سيتصل بك فريقنا قريبًا!'
                 : 'Thank you for your interest in being a part of Benyaan. Our team will soon contact you!'}
