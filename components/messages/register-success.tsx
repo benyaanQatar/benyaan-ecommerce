@@ -15,7 +15,9 @@ export const RegisterSuccess: FC<{ isArabic?: boolean }> = ({
         <div className="container">
           <header className="section-heading">
             <h2 className="section-title">
-              {isArabic ? 'شكرا لتسجيلك' : 'Thank you for registering'}
+              {isArabic
+                ? 'شكرًا لك على اهتمامك بأن تكون جزءًا منا. سيتصل بك فريقنا قريبًا!'
+                : 'Thank you for your interest in being a part of Benyaan. Our team will soon contact you!'}
             </h2>
           </header>
           <div className="row">
