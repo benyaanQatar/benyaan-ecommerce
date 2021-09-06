@@ -115,7 +115,7 @@ const Register: NextPage = () => {
           <h3 className="card-title highlight-color">Supplier Registration</h3>
           <Link href="/register/ar">
             <a>
-              <i className="fas fa-language mr-1"></i> Arabic
+              <i className="fas fa-language mr-1"></i> عربي
             </a>
           </Link>
         </header>
