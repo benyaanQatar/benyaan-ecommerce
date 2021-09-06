@@ -171,12 +171,9 @@ export const Header: FC = () => {
                     <i className="fas fa-language mr-1"></i> Language
                   </MDBDropdownToggle>
                   <MDBDropdownMenu>
-                    <Link href="/register/en" passHref>
-                      <MDBDropdownItem>English</MDBDropdownItem>
-                    </Link>
-                    <Link href="/register/ar" passHref>
-                      <MDBDropdownItem>عربي</MDBDropdownItem>
-                    </Link>
+                    <MDBDropdownItem>English</MDBDropdownItem>
+
+                    <MDBDropdownItem>عربي</MDBDropdownItem>
                   </MDBDropdownMenu>
                 </MDBDropdown>
               </MDBNavItem>

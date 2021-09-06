@@ -1,12 +1,13 @@
 import { Form, Formik } from 'formik';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import { useState } from 'react';
 import { RegisterSuccess } from '../../components/messages/register-success';
 import { DateFieldInput } from '../../shared/container/date-field';
 import { InputField } from '../../shared/container/input-field';
-export const api = 'https://benyaan.herokuapp.com/suppliers';
 
+export const api = 'https://benyaan.herokuapp.com/suppliers';
 const BuisnessTypePicker = dynamic(
   () => import('../../components/helpers/buisness-type-picker'),
   {
@@ -110,8 +111,13 @@ const Register: NextPage = () => {
       style={{ marginTop: '40px', marginBottom: '40px' }}
     >
       <article className="card-body" id="register-view">
-        <header className="mb-4 ">
+        <header className="mb-4 d-flex justify-content-between align-items-center">
           <h3 className="card-title highlight-color">Supplier Registration</h3>
+          <Link href="/register/ar">
+            <a>
+              <i className="fas fa-language mr-1"></i> Arabic
+            </a>
+          </Link>
         </header>
         <Formik
           initialValues={{

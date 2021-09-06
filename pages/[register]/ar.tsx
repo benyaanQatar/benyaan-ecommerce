@@ -1,6 +1,7 @@
 import { Form, Formik } from 'formik';
 import type { NextPage } from 'next';
 import dynamic from 'next/dynamic';
+import Link from 'next/link';
 import { useState } from 'react';
 import { RegisterSuccess } from '../../components/messages/register-success';
 import { DateFieldInput } from '../../shared/container/date-field';
@@ -110,7 +111,12 @@ const Register: NextPage = () => {
       style={{ marginTop: '40px', marginBottom: '40px' }}
     >
       <article className="card-body text-right" id="register-view">
-        <header className="mb-4 ">
+        <header className="mb-4 d-flex justify-content-between align-items-center">
+          <Link href="/register/en">
+            <a>
+              <i className="fas fa-language mr-1"></i> English
+            </a>
+          </Link>
           <h3 className="card-title highlight-color">
             المعلومات المطلوبة للتسجيل في التطبيق
           </h3>
