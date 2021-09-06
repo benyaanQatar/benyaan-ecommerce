@@ -164,19 +164,6 @@ export const Header: FC = () => {
                   <a className="nav-link">Register With Us</a>
                 </Link>
               </MDBNavItem>
-
-              <MDBNavItem>
-                <MDBDropdown>
-                  <MDBDropdownToggle nav caret>
-                    <i className="fas fa-language mr-1"></i> Language
-                  </MDBDropdownToggle>
-                  <MDBDropdownMenu>
-                    <MDBDropdownItem>English</MDBDropdownItem>
-
-                    <MDBDropdownItem>عربي</MDBDropdownItem>
-                  </MDBDropdownMenu>
-                </MDBDropdown>
-              </MDBNavItem>
             </MDBNavbarNav>
           </MDBCollapse>
         </div>
