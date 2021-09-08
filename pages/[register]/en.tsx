@@ -228,13 +228,16 @@ const Register: NextPage = () => {
                       title="Issue Date"
                       setValues={setValues}
                       values={values}
+                      maxDate={() => new Date()}
                     />
                     <DateFieldInput
                       inputClassName="form-control"
                       name="CommercialRegistrationNumberExpiryDate"
                       title="Expiry Date"
                       setValues={setValues}
+                      minDate={() => new Date()}
                       values={values}
+                      isDisabled={!values.CommercialRegistrationNumberIssueDate}
                     />
                   </div>
                   <div className="input-group mb-3">
@@ -274,6 +277,7 @@ const Register: NextPage = () => {
                       setValues={setValues}
                       values={values}
                       title="Issue Date"
+                      maxDate={() => new Date()}
                     />
                     <DateFieldInput
                       inputClassName="form-control"
@@ -281,6 +285,8 @@ const Register: NextPage = () => {
                       setValues={setValues}
                       values={values}
                       title="Expiry Date"
+                      isDisabled={!values.TradingLicenseNumberIssueDate}
+                      minDate={() => new Date()}
                     />
                   </div>
                   <div className="input-group mb-3">

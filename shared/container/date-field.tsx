@@ -7,6 +7,9 @@ interface DateFieldInputProps extends Omit<InputFieldProps, 'type'> {
   setValues: any;
   values: any;
   showArabic?: boolean;
+  maxDate?: () => Date | string;
+  minDate?: () => Date | string;
+  isDisabled?: boolean;
 }
 
 export const DateFieldInput: FC<DateFieldInputProps> = ({
@@ -16,6 +19,9 @@ export const DateFieldInput: FC<DateFieldInputProps> = ({
   setValues,
   values,
   showArabic = false,
+  maxDate,
+  minDate,
+  isDisabled = false,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const dateRef = useRef<HTMLDivElement>(null);
@@ -43,6 +49,9 @@ export const DateFieldInput: FC<DateFieldInputProps> = ({
           value={values[name] || undefined}
           multiple={false}
           format="YYYY-MM-DD"
+          disabled={isDisabled}
+          maxDate={maxDate ? maxDate() : ''}
+          minDate={minDate ? minDate() : ''}
           onChange={(e: any) => {
             if (e instanceof DateObject) {
               setValues({ ...values, [name]: e?.format('YYYY-MM-DD') });
