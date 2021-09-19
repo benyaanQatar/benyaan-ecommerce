@@ -13,7 +13,7 @@ const CarouselHome = () => {
     <MDBContainer className="slider-home-banner carousel slide">
       <MDBCarousel
         activeItem={1}
-        length={3}
+        length={8}
         showControls={true}
         showIndicators={true}
         className="z-depth-1"
@@ -24,7 +24,7 @@ const CarouselHome = () => {
             <MDBView>
               <img
                 className="d-block w-100"
-                src="images/banners/slide1.jpg"
+                src="images/demo/Banners/b1.jpg"
                 alt="First slide"
               />
             </MDBView>
@@ -33,7 +33,7 @@ const CarouselHome = () => {
             <MDBView>
               <img
                 className="d-block w-100"
-                src="images/banners/slide2.jpg"
+                src="images/demo/Banners/b2.jpg"
                 alt="Second slide"
               />
             </MDBView>
@@ -42,7 +42,52 @@ const CarouselHome = () => {
             <MDBView>
               <img
                 className="d-block w-100"
-                src="images/banners/slide3.jpg"
+                src="images/demo/Banners/b3.jpg"
+                alt="Third slide"
+              />
+            </MDBView>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId="4">
+            <MDBView>
+              <img
+                className="d-block w-100"
+                src="images/demo/Banners/b4.jpg"
+                alt="Third slide"
+              />
+            </MDBView>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId="5">
+            <MDBView>
+              <img
+                className="d-block w-100"
+                src="images/demo/Banners/b5.jpg"
+                alt="Third slide"
+              />
+            </MDBView>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId="6">
+            <MDBView>
+              <img
+                className="d-block w-100"
+                src="images/demo/Banners/b6.jpg"
+                alt="Third slide"
+              />
+            </MDBView>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId="7">
+            <MDBView>
+              <img
+                className="d-block w-100"
+                src="images/demo/Banners/b7.jpg"
+                alt="Third slide"
+              />
+            </MDBView>
+          </MDBCarouselItem>
+          <MDBCarouselItem itemId="8">
+            <MDBView>
+              <img
+                className="d-block w-100"
+                src="images/demo/Banners/b8.jpg"
                 alt="Third slide"
               />
             </MDBView>
