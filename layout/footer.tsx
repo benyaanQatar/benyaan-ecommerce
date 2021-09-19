@@ -12,22 +12,27 @@ export const Footer: FC = () => {
               <ul className="list-unstyled">
                 <li>
                   <Link href="/">
-                    <a>Adidas</a>
+                    <a>Ikea</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/">
-                    <a>Puma</a>
+                    <a>DeWALT</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/">
-                    <a>Reebok</a>
+                    <a>BOSCH</a>
                   </Link>
                 </li>
                 <li>
                   <Link href="/">
-                    <a>Nike</a>
+                    <a>HILTI</a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/">
+                    <a>HITACHI</a>
                   </Link>
                 </li>
               </ul>
@@ -126,12 +131,12 @@ export const Footer: FC = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://twitter.com/BenyaanQ">
                     <i className="fab fa-twitter" /> Twitter
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a href="https://www.instagram.com/benyaan.qa/?hl=en">
                     <i className="fab fa-instagram" /> Instagram
                   </a>
                 </li>

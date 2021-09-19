@@ -16,25 +16,28 @@ const Home: NextPage = () => {
                 <nav className="nav-home-aside">
                   <ul className="menu-category">
                     <li>
-                      <a href="#">Fashion and clothes</a>
+                      <a href="#">General Construction</a>
                     </li>
                     <li>
-                      <a href="#">Automobile and motors</a>
+                      <a href="#">Interior Design</a>
                     </li>
                     <li>
-                      <a href="#">Gardening and agriculture</a>
+                      <a href="#">Engineering Consultant&apos;s</a>
                     </li>
                     <li>
-                      <a href="#">Electronics and tech</a>
+                      <a href="#">Decorations work </a>
                     </li>
                     <li>
-                      <a href="#">Packaging and printing</a>
+                      <a href="#">Home Furnitures </a>
                     </li>
                     <li>
-                      <a href="#">Home and kitchen</a>
+                      <a href="#">Surveillance and Cameras</a>
                     </li>
                     <li>
-                      <a href="#">Digital goods</a>
+                      <a href="#">Furniture and Curtains</a>
+                    </li>
+                    <li>
+                      <a href="#">Kitchen and cookware</a>
                     </li>
                     <li className="has-submenu">
                       <a href="#">More items</a>
@@ -71,42 +74,42 @@ const Home: NextPage = () => {
                   </h6>
                   <div className="card-banner border-bottom">
                     <div className="py-3" style={{ width: '80%' }}>
-                      <h6 className="card-title">Men clothing</h6>
+                      <h6 className="card-title">Cleaning Services </h6>
                       <a href="#" className="btn btn-secondary btn-sm">
                         Source now
                       </a>
                     </div>
                     <img
                       alt="..."
-                      src="images/items/1.jpg"
+                      src="images/demo/CleaningServices.png"
                       height={80}
                       className="img-bg"
                     />
                   </div>
                   <div className="card-banner border-bottom">
                     <div className="py-3" style={{ width: '80%' }}>
-                      <h6 className="card-title">Winter clothing</h6>
+                      <h6 className="card-title">Decoration</h6>
                       <a href="#" className="btn btn-secondary btn-sm">
                         Source now
                       </a>
                     </div>
                     <img
                       alt="..."
-                      src="images/items/2.jpg"
+                      src="images/demo/decoration.png"
                       height={80}
                       className="img-bg"
                     />
                   </div>
                   <div className="card-banner border-bottom">
                     <div className="py-3" style={{ width: '80%' }}>
-                      <h6 className="card-title">Home inventory</h6>
+                      <h6 className="card-title">Building Tools</h6>
                       <a href="#" className="btn btn-secondary btn-sm">
                         Source now
                       </a>
                     </div>
                     <img
                       alt="..."
-                      src="images/items/6.jpg"
+                      src="images/demo/Buildingtools.png"
                       height={80}
                       className="img-bg"
                     />
@@ -125,12 +128,14 @@ const Home: NextPage = () => {
       {/* =============== SECTION DEAL =============== */}
       <section className="padding-bottom">
         <div className="card card-deal">
-          <div className="col-heading content-body">
+          <div className="col-heading content-body d-flex justify-content-center align-items-center">
             <header className="section-heading">
-              <h3 className="section-title">Deals and offers</h3>
-              <p>Hygiene equipments</p>
+              <h3 className="section-title text-center">
+                Most Viewed Categories
+              </h3>
+              {/* <p>Hygiene equipments</p> */}
             </header>
-            {/* sect-heading */}
+            {/*
             <div className="timer">
               <div>
                 <span className="num">04</span> <small>Days</small>
@@ -144,20 +149,20 @@ const Home: NextPage = () => {
               <div>
                 <span className="num">02</span> <small>Sec</small>
               </div>
-            </div>
+            </div> */}
           </div>
           {/* col.// */}
           <div className="row no-gutters items-wrap">
             <div className="col-md col-6">
               <figure className="card-product-grid card-sm">
                 <a href="#" className="img-wrap">
-                  <img alt="..." src="images/items/3.jpg" />
+                  <img alt="..." src="images/demo/Welding.png" />
                 </a>
                 <div className="text-wrap p-3">
                   <a href="#" className="title">
-                    Summer clothes
+                    Welding
                   </a>
-                  <span className="badge badge-danger"> -20% </span>
+                  {/* <span className="badge badge-danger"> -20% </span> */}
                 </div>
               </figure>
             </div>
@@ -165,13 +170,13 @@ const Home: NextPage = () => {
             <div className="col-md col-6">
               <figure className="card-product-grid card-sm">
                 <a href="#" className="img-wrap">
-                  <img alt="..." src="images/items/4.jpg" />
+                  <img alt="..." src="images/demo/Kitchen.png" />
                 </a>
                 <div className="text-wrap p-3">
                   <a href="#" className="title">
-                    Some category
+                    Cooker
                   </a>
-                  <span className="badge badge-danger"> -5% </span>
+                  {/* <span className="badge badge-danger"> -5% </span> */}
                 </div>
               </figure>
             </div>
@@ -179,13 +184,13 @@ const Home: NextPage = () => {
             <div className="col-md col-6">
               <figure className="card-product-grid card-sm">
                 <a href="#" className="img-wrap">
-                  <img alt="..." src="images/items/5.jpg" />
+                  <img alt="..." src="images/demo/SafetySecurity.png" />
                 </a>
                 <div className="text-wrap p-3">
                   <a href="#" className="title">
-                    Another category
+                    CCTV
                   </a>
-                  <span className="badge badge-danger"> -20% </span>
+                  {/* <span className="badge badge-danger"> -20% </span> */}
                 </div>
               </figure>
             </div>
@@ -193,13 +198,13 @@ const Home: NextPage = () => {
             <div className="col-md col-6">
               <figure className="card-product-grid card-sm">
                 <a href="#" className="img-wrap">
-                  <img alt="..." src="images/items/6.jpg" />
+                  <img alt="..." src="images/demo/OfficesFurntures.png" />
                 </a>
                 <div className="text-wrap p-3">
                   <a href="#" className="title">
-                    Home apparel
+                    Office Chair
                   </a>
-                  <span className="badge badge-danger"> -15% </span>
+                  {/* <span className="badge badge-danger"> -15% </span> */}
                 </div>
               </figure>
             </div>
@@ -207,13 +212,13 @@ const Home: NextPage = () => {
             <div className="col-md col-6">
               <figure className="card-product-grid card-sm">
                 <a href="#" className="img-wrap">
-                  <img alt="..." src="images/items/7.jpg" />
+                  <img alt="..." src="images/demo/Seedlings.png" />
                 </a>
                 <div className="text-wrap p-3">
                   <a href="#" className="title text-truncate">
-                    Smart watches
+                    Seedlings
                   </a>
-                  <span className="badge badge-danger"> -10% </span>
+                  {/* <span className="badge badge-danger"> -10% </span> */}
                 </div>
               </figure>
             </div>
@@ -225,21 +230,18 @@ const Home: NextPage = () => {
       {/* =============== SECTION 1 =============== */}
       <section className="padding-bottom">
         <header className="section-heading heading-line">
-          <h4 className="title-section text-uppercase">Apparel</h4>
+          <h4 className="title-section text-uppercase">Lightings</h4>
         </header>
         <div className="card card-home-category">
           <div className="row no-gutters">
             <div className="col-md-3">
               <div className="home-category-banner bg-light-orange">
-                <h5 className="title">Best trending clothes only for summer</h5>
-                <p>
-                  Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua.
-                </p>
+                <h5 className="title">Best Trending Lighting for Homes </h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <a href="#" className="btn btn-outline-primary rounded-pill">
                   Source now
                 </a>
-                <img src="images/items/2.jpg" className="img-bg" alt="..." />
+                <img src="images/demo/Main.png" className="img-bg" alt="..." />
               </div>
             </div>
             {/* col.// */}
@@ -249,16 +251,16 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Well made women clothes with trending collection
+                        Arabic And Western Combined Crysta Lamp
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/1.jpg"
+                        src="images/demo/ArabicAndWesternCombinedCrystalLamp.png"
                       />
-                      <p className="text-muted">
+                      {/* <p className="text-muted">
                         <i className="fa fa-map-marker-alt" /> Guanjou, China
-                      </p>
+                      </p> */}
                     </div>
                   </a>
                 </li>
@@ -266,16 +268,14 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Great clothes with trending collection
+                        Retro Crystal Lamp In Kind Promotion - Light Fixture
+                        Chandelier Lamp
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/2.jpg"
+                        src="images/demo/Retro Crystal Lamp In Kind Promotion - Light Fixture Chandelier Lamp .png"
                       />
-                      <p className="text-muted">
-                        <i className="fa fa-map-marker-alt" /> Beijing, China
-                      </p>
                     </div>
                   </a>
                 </li>
@@ -283,16 +283,16 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Demo clothes with sample collection
+                        Lamp - Chandelier Lamp Incandescent Light Bulb Aplic
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/3.jpg"
+                        src="images/demo/Lamp - Chandelier Lamp Incandescent Light Bulb Aplic.png"
                       />
-                      <p className="text-muted">
+                      {/* <p className="text-muted">
                         <i className="fa fa-map-marker-alt" /> Tokyo, Japan
-                      </p>
+                      </p> */}
                     </div>
                   </a>
                 </li>
@@ -300,16 +300,16 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Home and kitchen electronic stuff collection
+                        Lamp - Chandelier Lamp Lighting Living Room
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/4.jpg"
+                        src="images/demo/Lamp - Chandelier Lamp Lighting Living Room.png"
                       />
-                      <p className="text-muted">
+                      {/* <p className="text-muted">
                         <i className="fa fa-map-marker-alt" /> Tashkent, Uzb
-                      </p>
+                      </p> */}
                     </div>
                   </a>
                 </li>
@@ -317,16 +317,16 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Home and kitchen electronic stuff collection
+                        Crystal Light - Chandelier Light Crystal Lamp
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/5.jpg"
+                        src="images/demo/Crystal Light - Chandelier Light Crystal Lamp.png"
                       />
-                      <p className="text-muted">
+                      {/* <p className="text-muted">
                         <i className="fa fa-map-marker-alt" /> London, Britain
-                      </p>
+                      </p> */}
                     </div>
                   </a>
                 </li>
@@ -334,16 +334,16 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Home and kitchen electronic stuff collection
+                        Chandelier Light Vintage Clothing Toleware Antique
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/6.jpg"
+                        src="images/demo/Chandelier Light Vintage Clothing Toleware Antique.png"
                       />
-                      <p className="text-muted">
+                      {/* <p className="text-muted">
                         <i className="fa fa-map-marker-alt" /> Guanjou, China
-                      </p>
+                      </p> */}
                     </div>
                   </a>
                 </li>
@@ -351,16 +351,16 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Well made clothes with trending collection
+                        Chandelier Light Fixture Lighting Lamp Shades
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/7.jpg"
+                        src="images/demo/Chandelier Light Fixture Lighting Lamp Shades.png"
                       />
-                      <p className="text-muted">
+                      {/* <p className="text-muted">
                         <i className="fa fa-map-marker-alt" /> Hong Kong, China
-                      </p>
+                      </p> */}
                     </div>
                   </a>
                 </li>
@@ -368,16 +368,16 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Home and kitchen interior stuff collection
+                        Chandelier Light Fixture Lighting Brass
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/6.jpg"
+                        src="images/demo/Chandelier Light Fixture Lighting Brass.png"
                       />
-                      <p className="text-muted">
+                      {/* <p className="text-muted">
                         <i className="fa fa-map-marker-alt" /> Guanjou, China
-                      </p>
+                      </p> */}
                     </div>
                   </a>
                 </li>
@@ -393,21 +393,24 @@ const Home: NextPage = () => {
       {/* =============== SECTION 2 =============== */}
       <section className="padding-bottom">
         <header className="section-heading heading-line">
-          <h4 className="title-section text-uppercase">Electronics</h4>
+          <h4 className="title-section text-uppercase">Security And Safety</h4>
         </header>
         <div className="card card-home-category">
           <div className="row no-gutters">
             <div className="col-md-3">
               <div className="home-category-banner bg-light-orange">
-                <h5 className="title">Machinery items for manufacturers</h5>
-                <p>
-                  Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-                  ut labore et dolore magna aliqua.
-                </p>
+                <h5 className="title">
+                  Security Items for homes and companies{' '}
+                </h5>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <a href="#" className="btn btn-outline-primary rounded-pill">
                   Source now
                 </a>
-                <img alt="..." src="images/items/14.jpg" className="img-bg" />
+                <img
+                  alt="..."
+                  src="images/demo/MainSecurity.png"
+                  className="img-bg"
+                />
               </div>
             </div>
             {/* col.// */}
@@ -417,16 +420,17 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Well made electronic stuff collection
+                        Dome - Video Cameras Closed-circuit Television IP Camera
+                        Security
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/7.jpg"
+                        src="images/demo/Dome - Video Cameras Closed-circuit Television IP Camera Security.png"
                       />
-                      <p className="text-muted">
+                      {/* <p className="text-muted">
                         <i className="fa fa-map-marker-alt" /> Tokyo, Japan
-                      </p>
+                      </p> */}
                     </div>
                   </a>
                 </li>
@@ -434,16 +438,14 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Another demo text for item stuff goes here
+                        Wave Electronics System Video Cameras Closedcircuit
+                        Television IP Camera
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/8.jpg"
+                        src="images/demo/Wave Electronics System Video Cameras Closed-circuit Television IP Camera.png"
                       />
-                      <p className="text-muted">
-                        <i className="fa fa-map-marker-alt" /> Hong Kong, China
-                      </p>
                     </div>
                   </a>
                 </li>
@@ -451,15 +453,13 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Home and kitchen electronic stuff collection
+                        Network Video Recorder Closed-circuit Television IP
+                        Camera Digital Video Recorders
                       </h6>
                       <img
                         className="img-sm float-right"
-                        src="images/items/9.jpg"
+                        src="images/demo/Network Video Recorder Closed-circuit Television IP Camera Digital Video Recorders.png"
                       />
-                      <p className="text-muted">
-                        <i className="fa fa-map-marker-alt" /> Tashkent, Uzb
-                      </p>
                     </div>
                   </a>
                 </li>
@@ -467,16 +467,14 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Group of electronic stuff collection
+                        Credit Card Clearance Channel - Turnstile Machine Door
+                        Boom Barrier
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/10.jpg"
+                        src="images/demo/Credit Card Clearance Channel - Turnstile Machine Door Boom Barrier.png"
                       />
-                      <p className="text-muted">
-                        <i className="fa fa-map-marker-alt" /> Guanjou, China
-                      </p>
                     </div>
                   </a>
                 </li>
@@ -484,16 +482,14 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Home and kitchen electronic stuff collection
+                        Wireless Security Camera Network Video Recorder
+                        Closed-circuit Television IP Camera
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/11.jpg"
+                        src="images/demo/Wireless Security Camera Network Video Recorder Closed-circuit Television IP Camera.png"
                       />
-                      <p className="text-muted">
-                        <i className="fa fa-map-marker-alt" /> Guanjou, China
-                      </p>
                     </div>
                   </a>
                 </li>
@@ -501,16 +497,14 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Home and kitchen electronic stuff collection
+                        Access Control List - Zkteco Biometrics Access Control
+                        Fingerprint Computer
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/12.jpg"
+                        src="images/demo/Access Control List - Zkteco Biometrics Access Control Fingerprint Computer.png"
                       />
-                      <p className="text-muted">
-                        <i className="fa fa-map-marker-alt" /> Guanjou, China
-                      </p>
                     </div>
                   </a>
                 </li>
@@ -518,16 +512,13 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Home and kitchen electronic stuff collection
+                        Boom Barrier Car Park Gate Access Control System
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/1.jpg"
+                        src="images/demo/Boom Barrier Car Park Gate Access Control System.png"
                       />
-                      <p className="text-muted">
-                        <i className="fa fa-map-marker-alt" /> Guanjou, China
-                      </p>
                     </div>
                   </a>
                 </li>
@@ -535,16 +526,13 @@ const Home: NextPage = () => {
                   <a href="#" className="item">
                     <div className="card-body">
                       <h6 className="title">
-                        Home and kitchen electronic stuff collection
+                        Security Safes - Safety Home Security
                       </h6>
                       <img
                         alt="..."
                         className="img-sm float-right"
-                        src="images/items/2.jpg"
+                        src="images/demo/Security Safes - Safety Home Security .png"
                       />
-                      <p className="text-muted">
-                        <i className="fa fa-map-marker-alt" /> Guanjou, China
-                      </p>
                     </div>
                   </a>
                 </li>
@@ -650,11 +638,11 @@ const Home: NextPage = () => {
           <div className="col-xl-2 col-lg-3 col-md-4 col-6">
             <div className="card card-sm card-product-grid">
               <a href="#" className="img-wrap">
-                <img src="images/items/1.jpg" />
+                <img src="images/demo/Marble Stone Rock Jade Ceramic.png" />
               </a>
               <figcaption className="info-wrap">
                 <a href="#" className="title">
-                  Just another product name
+                  Marble Stone Rock Jade Ceramic
                 </a>
                 <div className="price mt-1">$179.00</div>
                 {/* price-wrap.// */}
@@ -665,11 +653,11 @@ const Home: NextPage = () => {
           <div className="col-xl-2 col-lg-3 col-md-4 col-6">
             <div className="card card-sm card-product-grid">
               <a href="#" className="img-wrap">
-                <img src="images/items/2.jpg" />
+                <img src="images/demo/Bathtub - Hot Tub Bathtub Swimming Pool Bathroom Massage.png" />
               </a>
               <figcaption className="info-wrap">
                 <a href="#" className="title">
-                  Some item name here
+                  Bathtub - Hot Tub Bathtub Swimming Pool Bathroom Massage
                 </a>
                 <div className="price mt-1">$280.00</div>
                 {/* price-wrap.// */}
@@ -680,11 +668,11 @@ const Home: NextPage = () => {
           <div className="col-xl-2 col-lg-3 col-md-4 col-6">
             <div className="card card-sm card-product-grid">
               <a href="#" className="img-wrap">
-                <img src="images/items/3.jpg" />
+                <img src="images/demo/Shower Bathroom Bathtub American Standard Brands Tap.png" />
               </a>
               <figcaption className="info-wrap">
                 <a href="#" className="title">
-                  Great product name here
+                  Shower Bathroom Bathtub American Standard Brands Tap
                 </a>
                 <div className="price mt-1">$56.00</div>
                 {/* price-wrap.// */}
@@ -695,11 +683,11 @@ const Home: NextPage = () => {
           <div className="col-xl-2 col-lg-3 col-md-4 col-6">
             <div className="card card-sm card-product-grid">
               <a href="#" className="img-wrap">
-                <img src="images/items/4.jpg" />
+                <img src="images/demo/3D Interior Design - Interior Design Services.png" />
               </a>
               <figcaption className="info-wrap">
                 <a href="#" className="title">
-                  Just another product name
+                  3D Interior Design - Interior Design Services
                 </a>
                 <div className="price mt-1">$179.00</div>
                 {/* price-wrap.// */}
@@ -710,11 +698,11 @@ const Home: NextPage = () => {
           <div className="col-xl-2 col-lg-3 col-md-4 col-6">
             <div className="card card-sm card-product-grid">
               <a href="#" className="img-wrap">
-                <img src="images/items/5.jpg" />
+                <img src="images/demo/Table Garden Furniture Chaise Longue Chair Couch.png" />
               </a>
               <figcaption className="info-wrap">
                 <a href="#" className="title">
-                  Just another product name
+                  Table Garden Furniture Chaise Longue Chair Couch
                 </a>
                 <div className="price mt-1">$179.00</div>
                 {/* price-wrap.// */}
@@ -725,11 +713,12 @@ const Home: NextPage = () => {
           <div className="col-xl-2 col-lg-3 col-md-4 col-6">
             <div className="card card-sm card-product-grid">
               <a href="#" className="img-wrap">
-                <img src="images/items/6.jpg" />
+                <img src="images/demo/Solar Panel - Solar Panels Solar Power Solar Energy Photovoltaic System Solar Lamp.png" />
               </a>
               <figcaption className="info-wrap">
                 <a href="#" className="title">
-                  Some item name here
+                  Solar Panel - Solar Panels Solar Power Solar Energy
+                  Photovoltaic System Solar Lamp
                 </a>
                 <div className="price mt-1">$280.00</div>
                 {/* price-wrap.// */}
@@ -740,11 +729,11 @@ const Home: NextPage = () => {
           <div className="col-xl-2 col-lg-3 col-md-4 col-6">
             <div className="card card-sm card-product-grid">
               <a href="#" className="img-wrap">
-                <img src="images/items/7.jpg" />
+                <img src="images/demo/Woodshop Tool Cabinets - Stanley Hand Tools Tool Boxes Plastic.png" />
               </a>
               <figcaption className="info-wrap">
                 <a href="#" className="title">
-                  Great product name here
+                  Woodshop Tool Cabinets - Stanley Hand Tools Tool Boxes Plastic
                 </a>
                 <div className="price mt-1">$56.00</div>
                 {/* price-wrap.// */}
@@ -755,11 +744,12 @@ const Home: NextPage = () => {
           <div className="col-xl-2 col-lg-3 col-md-4 col-6">
             <div className="card card-sm card-product-grid">
               <a href="#" className="img-wrap">
-                <img src="images/items/9.jpg" />
+                <img src="images/demo/Generator - Electric Generator Sine Wave Power Inverters Emergency Power System Diesel Generator .png" />
               </a>
               <figcaption className="info-wrap">
                 <a href="#" className="title">
-                  Just another product name
+                  Generator - Electric Generator Sine Wave Power Inverters
+                  Emergency Power System Diesel Generator
                 </a>
                 <div className="price mt-1">$179.00</div>
                 {/* price-wrap.// */}
@@ -770,11 +760,11 @@ const Home: NextPage = () => {
           <div className="col-xl-2 col-lg-3 col-md-4 col-6">
             <div className="card card-sm card-product-grid">
               <a href="#" className="img-wrap">
-                <img src="images/items/4.jpg" />
+                <img src="images/demo/Swimming Pool - Swimming Pool Hot Tub Landscaping Shotcrete.png" />
               </a>
               <figcaption className="info-wrap">
                 <a href="#" className="title">
-                  Just another product name
+                  Swimming Pool - Swimming Pool Hot Tub Landscaping Shotcrete
                 </a>
                 <div className="price mt-1">$179.00</div>
                 {/* price-wrap.// */}
@@ -785,11 +775,11 @@ const Home: NextPage = () => {
           <div className="col-xl-2 col-lg-3 col-md-4 col-6">
             <div className="card card-sm card-product-grid">
               <a href="#" className="img-wrap">
-                <img src="images/items/5.jpg" />
+                <img src="images/demo/White Sofa - Loveseat Sofa Bed Chair Futon Couch.png" />
               </a>
               <figcaption className="info-wrap">
                 <a href="#" className="title">
-                  Just another product name
+                  White Sofa - Loveseat Sofa Bed Chair Futon Couch
                 </a>
                 <div className="price mt-1">$179.00</div>
                 {/* price-wrap.// */}
@@ -800,11 +790,11 @@ const Home: NextPage = () => {
           <div className="col-xl-2 col-lg-3 col-md-4 col-6">
             <div className="card card-sm card-product-grid">
               <a href="#" className="img-wrap">
-                <img src="images/items/6.jpg" />
+                <img src="images/demo/Hand Saw Image - Stanley Hand Tools Hand Saw.png" />
               </a>
               <figcaption className="info-wrap">
                 <a href="#" className="title">
-                  Some item name here
+                  Hand Saw Image - Stanley Hand Tools Hand Saw
                 </a>
                 <div className="price mt-1">$280.00</div>
                 {/* price-wrap.// */}
@@ -815,11 +805,11 @@ const Home: NextPage = () => {
           <div className="col-xl-2 col-lg-3 col-md-4 col-6">
             <div className="card card-sm card-product-grid">
               <a href="#" className="img-wrap">
-                <img src="images/items/7.jpg" />
+                <img src="images/demo/Tv Stand - Table Television Set Furniture Burbank.png" />
               </a>
               <figcaption className="info-wrap">
                 <a href="#" className="title">
-                  Great product name here
+                  Tv Stand - Table Television Set Furniture Burbank
                 </a>
                 <div className="price mt-1">$56.00</div>
                 {/* price-wrap.// */}
@@ -839,7 +829,10 @@ const Home: NextPage = () => {
         <div className="row">
           <div className="col-md-3 col-sm-6">
             <article className="card card-post">
-              <img src="images/posts/1.jpg" className="card-img-top" />
+              <img
+                src="images/demo/business-office-contract-agreement.jpg"
+                className="card-img-top"
+              />
               <div className="card-body">
                 <h6 className="title">Trade Assurance</h6>
                 <p className="small text-uppercase text-muted">
@@ -852,9 +845,12 @@ const Home: NextPage = () => {
           {/* col.// */}
           <div className="col-md-3 col-sm-6">
             <article className="card card-post">
-              <img src="images/posts/2.jpg" className="card-img-top" />
+              <img
+                src="images/demo/istockphoto-1304677649-170667a.jpg"
+                className="card-img-top"
+              />
               <div className="card-body">
-                <h6 className="title">Pay anytime</h6>
+                <h6 className="title">Approved</h6>
                 <p className="small text-uppercase text-muted">
                   Finance solution
                 </p>
@@ -901,50 +897,59 @@ const Home: NextPage = () => {
         <ul className="row mt-4">
           <li className="col-md col-6">
             <a href="#" className="icontext">
-              <img className="icon-flag-sm" src="images/icons/flags/CN.png" />
-              <span>China</span>
+              <img className="icon-flag-sm" src="images/demo/tn_sa-flag.gif" />
+              <span>KSA</span>
             </a>
           </li>
           <li className="col-md col-6">
             <a href="#" className="icontext">
-              <img className="icon-flag-sm" src="images/icons/flags/DE.png" />
-              <span>Germany</span>
+              <img className="icon-flag-sm" src="images/demo/tn_ku-flag.gif" />
+              <span>Kuwait</span>
             </a>
           </li>
           <li className="col-md col-6">
             <a href="#" className="icontext">
-              <img className="icon-flag-sm" src="images/icons/flags/AU.png" />
-              <span>Australia</span>
+              <img className="icon-flag-sm" src="images/demo/tn_ba-flag.gif" />
+              <span>Bahrain</span>
             </a>
           </li>
           <li className="col-md col-6">
             <a href="#" className="icontext">
-              <img className="icon-flag-sm" src="images/icons/flags/RU.png" />
-              <span>Russia</span>
+              <img className="icon-flag-sm" src="images/demo/tn_mu-flag.gif" />
+              <span>Oman</span>
             </a>
           </li>
           <li className="col-md col-6">
             <a href="#" className="icontext">
-              <img className="icon-flag-sm" src="images/icons/flags/IN.png" />
-              <span>India</span>
+              <img
+                className="icon-flag-sm"
+                src="images/demo/255px-Flag_of_the_United_Arab_Emirates.svg.png"
+              />
+              <span>UAE</span>
             </a>
           </li>
           <li className="col-md col-6">
             <a href="#" className="icontext">
-              <img className="icon-flag-sm" src="images/icons/flags/GB.png" />
-              <span>England</span>
+              <img className="icon-flag-sm" src="images/demo/tn_jo-flag.gif" />
+              <span>Jordan</span>
             </a>
           </li>
           <li className="col-md col-6">
             <a href="#" className="icontext">
-              <img className="icon-flag-sm" src="images/icons/flags/TR.png" />
+              <img className="icon-flag-sm" src="images/demo/tn_le-flag.gif" />
+              <span>Lebanon</span>
+            </a>
+          </li>
+          <li className="col-md col-6">
+            <a href="#" className="icontext">
+              <img className="icon-flag-sm" src="images/demo/tn_tu-flag.gif" />
               <span>Turkey</span>
             </a>
           </li>
           <li className="col-md col-6">
             <a href="#" className="icontext">
-              <img className="icon-flag-sm" src="images/icons/flags/UZ.png" />
-              <span>Uzbekistan</span>
+              <img className="icon-flag-sm" src="images/demo/tn_ch-flag.gif" />
+              <span>China</span>
             </a>
           </li>
           <li className="col-md col-6">
