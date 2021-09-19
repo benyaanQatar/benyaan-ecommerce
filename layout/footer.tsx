@@ -126,11 +126,6 @@ export const Footer: FC = () => {
               <h6 className="title">Social</h6>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#">
-                    <i className="fab fa-facebook" /> Facebook
-                  </a>
-                </li>
-                <li>
                   <a href="https://twitter.com/BenyaanQ">
                     <i className="fab fa-twitter" /> Twitter
                   </a>
@@ -138,11 +133,6 @@ export const Footer: FC = () => {
                 <li>
                   <a href="https://www.instagram.com/benyaan.qa/?hl=en">
                     <i className="fab fa-instagram" /> Instagram
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="fab fa-youtube" /> Youtube
                   </a>
                 </li>
               </ul>

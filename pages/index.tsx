@@ -238,6 +238,8 @@ const Home: NextPage = () => {
               <div className="home-category-banner bg-light-orange">
                 <h5 className="title">Best Trending Lighting for Homes </h5>
                 {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> */}
+                <br />
+                <br />
                 <a href="#" className="btn btn-outline-primary rounded-pill">
                   Source now
                 </a>
@@ -403,6 +405,8 @@ const Home: NextPage = () => {
                   Security Items for homes and companies{' '}
                 </h5>
                 {/* <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p> */}
+                <br />
+                <br />
                 <a href="#" className="btn btn-outline-primary rounded-pill">
                   Source now
                 </a>
@@ -556,16 +560,19 @@ const Home: NextPage = () => {
           <div className="col-md-8">
             <div
               className="card-banner banner-quote overlay-gradient"
-              style={{ backgroundImage: 'url("images/banners/banner9.jpg")' }}
+              style={{ backgroundImage: 'url("images/bg.jpeg")' }}
             >
               <div className="card-img-overlay white">
                 <h3 className="card-title">
                   An easy way to send request to suppliers
                 </h3>
+
                 {/* <p className="card-text" style={{ maxWidth: '400px' }}>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
                   do eiusmod tempor incididunt.
                 </p> */}
+                <br />
+                <br />
                 <a href="#" className="btn btn-primary rounded-pill">
                   Learn more
                 </a>
